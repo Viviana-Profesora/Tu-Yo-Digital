@@ -1,0 +1,298 @@
+/* ==========================================================================
+   1. IMPORTACIÓN DE FUENTES Y REINICIALIZACIÓN (RESET)
+   ========================================================================== */
+
+/* Importamos las fuentes Montserrat (texto) y Dancing Script (título cursiva) desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Reiniciamos los márgenes y rellenos por defecto que agregan los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye bordes y padding dentro del ancho del elemento */
+}
+
+/* Scroll suave para que al hacer clic en los botones del menú la página se desplace suavemente */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. CONFIGURACIÓN GENERAL DEL CUERPO (BODY)
+   ========================================================================== */
+
+body {
+    background-color: #eaf4f0; /* Fondo general verde pastel bien claro y suave */
+    color: #2c3e50;           /* Texto principal en gris/azul oscuro para máxima legibilidad */
+    font-family: 'Montserrat', sans-serif; /* Tipografía limpia y moderna */
+    font-size: 15px;
+    line-height: 1.6;          /* Espaciado entre líneas para facilitar la lectura */
+}
+
+/* ==========================================================================
+   3. ENCABEZADO Y LOGO (HEADER)
+   ========================================================================== */
+
+header {
+    background-color: #ffffff; /* Fondo blanco para hacer resaltar la barra */
+    text-align: center;
+    padding: 20px 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); /* Sombra muy tenue en la parte inferior */
+    position: sticky;                           /* Mantiene el menú fijo en la parte superior */
+    top: 0;
+    z-index: 1000;                              /* Asegura que quede por encima de las tarjetas */
+}
+
+/* Control del tamaño y centrado del logo */
+header .logo {
+    width: 100px;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* Título principal con estilo cursiva en tono azul pastel */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #4b8da0;            /* Azul pastel cálido */
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* Subtítulo debajo del nombre */
+.subtitulo-header {
+    color: #6a8895;            /* Azul pastel apagado */
+    font-size: 14px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   4. MENÚ DE NAVEGACIÓN Y BOTONES
+   ========================================================================== */
+
+/* Contenedor flexible para alinear los botones */
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;                  /* Espacio entre cada botón */
+    flex-wrap: wrap;            /* Si la pantalla es chica, se acomodan abajo */
+}
+
+/* Estilo para convertir los enlaces <a> en botones redondeados tipo píldora */
+.btn-nav {
+    background-color: #d9ede6; /* Verde/azul pastel muy suave */
+    color: #2b616d;           /* Texto azul pastel oscuro */
+    padding: 8px 18px;
+    text-decoration: none;      /* Quita el subrayado típico de los enlaces */
+    border-radius: 20px;        /* Bordes bien redondeados */
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #b7dcd0;
+    transition: all 0.2s ease;  /* Transición suave al pasar el mouse */
+}
+
+/* Efecto al pasar el puntero sobre los botones del menú */
+.btn-nav:hover {
+    background-color: #4b8da0;
+    color: #ffffff;
+    border-color: #4b8da0;
+    transform: translateY(-2px); /* Eleva levemente el botón */
+}
+
+/* ==========================================================================
+   5. CONTENEDOR PRINCIPAL Y TARJETAS (SECTIONS)
+   ========================================================================== */
+
+main {
+    max-width: 820px;           /* Ancho máximo centrado en la pantalla */
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Cada sección tiene forma de tarjeta blanca flotante */
+section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Sombra elegante */
+}
+
+/* Títulos de cada sección en azul pastel destacado */
+h2 {
+    color: #3f7b8d;            /* Azul pastel vibrante */
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #d9ede6; /* Línea divisoria suave */
+    padding-bottom: 8px;
+}
+
+/* ==========================================================================
+   6. TABLAS DE DATOS Y CARRITO
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;  /* Une los bordes de la tabla para que quede limpia */
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #eef4f2;
+}
+
+/* Encabezados de las tablas con fondo suave */
+th {
+    background-color: #f1f8f5;
+    color: #3f7b8d;            /* Azul pastel */
+    font-weight: 600;
+}
+
+/* Efecto hover en las filas de la tabla */
+tr:hover {
+    background-color: #fbfdfe;
+}
+
+/* Estilo especial para la tarjeta contenedora del carrito */
+.contenedor-carrito {
+    background-color: #f5fafd; /* Un azul/verde pastel extremadamente claro */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0eff1;
+    margin-top: 15px;
+}
+
+.total-carrito {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+/* ==========================================================================
+   7. BOTONES DE ACCIÓN (Llamadas a la acción y Submit)
+   ========================================================================== */
+
+.btn-accion, 
+button[type="submit"] {
+    display: inline-block;
+    background-color: #4b8da0; /* Azul pastel vibrante para llamar la atención */
+    color: #ffffff;            /* Texto blanco */
+    padding: 10px 24px;
+    border: none;
+    border-radius: 25px;       /* Forma ovalada */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover en botones principales */
+.btn-accion:hover, 
+button[type="submit"]:hover {
+    background-color: #3a7282; /* Tono de azul un poco más oscuro al pasar el mouse */
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   8. FORMULARIO DE CONTACTO
+   ========================================================================== */
+
+form {
+    display: flex;
+    flex-direction: column;    /* Coloca los elementos uno debajo de otro */
+    gap: 12px;                 /* Distancia entre etiquetas e insumos */
+    margin-top: 15px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4b626e;
+}
+
+/* Estilos para las cajas de entrada de texto, selección y área de mensaje */
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #cce2dc;  /* Borde fino color pastel */
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #2c3e50;
+    background-color: #fafdfc;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* Resaltado del borde cuando el usuario hace clic dentro de un campo */
+input:focus, select:focus, textarea:focus {
+    border-color: #4b8da0;     /* Borde azul pastel activo */
+    background-color: #ffffff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;          /* Permite redimensionar solo la altura del cuadro */
+}
+
+/* ==========================================================================
+   9. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6a8895;            /* Texto sutil */
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.titulo-footer {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #3f7b8d;
+    margin-bottom: 4px;
+}
+
+
+/* ESTILO PARA EL BOTÓN DE ARREPENTIMIENTO / CANCELAR */
+        .btn-cancelar {
+            display: inline-block;
+            background-color: transparent; /* Fondo transparente */
+            color: #d9534f;                 /* Color rojo suave/pastel para indicar cancelación */
+            padding: 9px 18px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #d9534f;      /* Borde fino del mismo tono */
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-left: 8px;               /* Separación con el botón de confirmar */
+            transition: all 0.2s ease;
+        }
+
+        /* EFECTO HOVER EN EL BOTÓN DE CANCELAR */
+        .btn-cancelar:hover {
+            background-color: #fdf2f2;      /* Fondo rosado pastel al pasar el mouse */
+            color: #c9302c;
+            border-color: #c9302c;
+        }
+
+        /* NOTA INFORMATIVA DE ARREPENTIMIENTO */
+        .nota-arrepentimiento {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #cfd8dc;  /* Línea punteada suave para separar */
+            color: #607d8b;
+            font-size: 12px;
+            text-align: center;
+        }
