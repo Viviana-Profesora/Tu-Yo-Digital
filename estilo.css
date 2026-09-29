@@ -44,7 +44,7 @@ header {
 }
 
 /* Control del tamaño y centrado del logo */
-header .logo {
+header .logo-imagen {
     width: 100px;
     max-width: 100px;
     height: auto;
@@ -74,11 +74,13 @@ h1 {
    ========================================================================== */
 
 /* Contenedor flexible para alinear los botones */
-.menu-navegacion {
+.menu-navegacion ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 10px;                  /* Espacio entre cada botón */
-    flex-wrap: wrap;            /* Si la pantalla es chica, se acomodan abajo */
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 /* Estilo para convertir los enlaces <a> en botones redondeados tipo píldora */
@@ -296,3 +298,133 @@ footer {
             font-size: 12px;
             text-align: center;
         }
+
+
+       /* CARDS DE PRODUCTOS */
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-producto {
+    flex: 1 1 200px;
+    background-color: #f5fafd;
+    border: 1px solid #e0eff1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-producto h3 {
+    color: #3f7b8d;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 15px 0;
+} 
+
+
+/* RESEÑAS - GRID */
+
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resena {
+    background-color: #f5fafd;
+    border: 1px solid #e0eff1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.resena p {
+    margin-bottom: 12px;
+}
+
+.resena strong {
+    color: #3f7b8d;
+}
+
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .menu-navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Las cards pasan a una columna */
+    .productos {
+        flex-direction: column;
+    }
+
+    /* Las reseñas pasan de 3 columnas a 1 */
+    .resenas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* El formulario ocupa todo el ancho */
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+}
+
+
+.menu-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-carrito {
+    position: absolute;
+    right: 0;
+    background-color: #d9ede6;
+    color: #2b616d;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #b7dcd0;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- 'lang="es"' le indica a los buscadores y lectores de pantalla que el sitio está en español -->
 <html lang="es">
+
 <head>
     <!-- Define la codificación de caracteres para que se lean bien los acentos y las eñes -->
     <meta charset="UTF-8">
@@ -10,12 +11,14 @@
 
     <!-- Título que se muestra en la pestaña del navegador -->
     <title>Tu Yo Digital</title>
-    
+
     <!-- CONEXIÓN CON GOOGLE FONTS -->
     <!-- Importamos dos tipografías externas: Dancing Script  y Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- CSS Apariencia visual -->
     <style>
@@ -24,7 +27,8 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Incluye bordes y rellenos en el ancho total */
+            box-sizing: border-box;
+            /* Incluye bordes y rellenos en el ancho total */
         }
 
         /* Hace que la navegación con botones de salto (#inicio, #clases) desplace la página suavemente */
@@ -34,22 +38,30 @@
 
         /* ESTILOS DEL CUERPO (BACKGROUND Y TIPOGRAFÍA GENERAL) */
         body {
-            background-color: #eaf3ed;  /* Fondo verde pastel claro y relajante */
-            color: #37474f;            /* Texto en gris oscuro */
-            font-family: 'Montserrat', sans-serif; /* Tipografía principal */
+            background-color: #eaf3ed;
+            /* Fondo verde pastel claro y relajante */
+            color: #37474f;
+            /* Texto en gris oscuro */
+            font-family: 'Montserrat', sans-serif;
+            /* Tipografía principal */
             font-size: 15px;
-            line-height: 1.6;          /* Espaciado entre líneas de texto */
+            line-height: 1.6;
+            /* Espaciado entre líneas de texto */
         }
 
         /* ENCABEZADO (HEADER) FIJO */
         header {
-            background-color: #ffffff; /* Fondo blanco para que resalte la cabecera */
+            background-color: #ffffff;
+            /* Fondo blanco para que resalte la cabecera */
             text-align: center;
             padding: 22px 20px 18px 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); /* Sombra suave inferior */
-            position: sticky;                           /* Mantiene el header fijo al hacer scroll */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            /* Sombra suave inferior */
+            position: sticky;
+            /* Mantiene el header fijo al hacer scroll */
             top: 0;
-            z-index: 100;                               /* Asegura que el header quede por encima de las secciones */
+            z-index: 100;
+            /* Asegura que el header quede por encima de las secciones */
         }
 
         /* Control del logo */
@@ -58,13 +70,15 @@
             max-width: 100px;
             height: auto;
             display: block;
-            margin: 0 auto 10px auto; /* Centra la imagen horizontalmente */
+            margin: 0 auto 10px auto;
+            /* Centra la imagen horizontalmente */
         }
 
         /* Título principal con fuente cursiva en azul pastel */
         h1 {
             font-family: 'Dancing Script', cursive;
-            color: #5b92a8;             /* Azul pastel elegante */
+            color: #5b92a8;
+            /* Azul pastel elegante */
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 4px;
@@ -80,22 +94,30 @@
         /* MENÚ DE NAVEGACIÓN */
         .menu-navegacion {
             display: flex;
-            justify-content: center; /* Centra los botones del menú */
-            gap: 10px;               /* Distancia entre botones */
-            flex-wrap: wrap;         /* Permite que los botones bajen si la pantalla es pequeña */
+            justify-content: center;
+            /* Centra los botones del menú */
+            gap: 10px;
+            /* Distancia entre botones */
+            flex-wrap: wrap;
+            /* Permite que los botones bajen si la pantalla es pequeña */
         }
 
         /* BOTONES DEL MENÚ (Forma de píldora) */
         .btn-nav {
-            background-color: #dceee9; /* Fondo suave mezcla verde/azul */
-            color: #2e6070;            /* Texto azul pastel oscuro */
+            background-color: #dceee9;
+            /* Fondo suave mezcla verde/azul */
+            color: #2e6070;
+            /* Texto azul pastel oscuro */
             padding: 8px 18px;
-            text-decoration: none;      /* Quita el subrayado típico de los enlaces */
-            border-radius: 20px;        /* Bordes redondeados */
+            text-decoration: none;
+            /* Quita el subrayado típico de los enlaces */
+            border-radius: 20px;
+            /* Bordes redondeados */
             font-size: 13px;
             font-weight: 600;
             border: 1px solid #c2e2d8;
-            transition: all 0.2s ease;  /* Transición suave al pasar el cursor */
+            transition: all 0.2s ease;
+            /* Transición suave al pasar el cursor */
         }
 
         /* EFECTO HOVER: Cambia de color cuando pasás el mouse por arriba */
@@ -103,13 +125,16 @@
             background-color: #5b92a8;
             color: #ffffff;
             border-color: #5b92a8;
-            transform: translateY(-2px); /* Eleva levemente el botón */
+            transform: translateY(-2px);
+            /* Eleva levemente el botón */
         }
 
         /* CONTENEDOR PRINCIPAL Y SECCIONES */
         main {
-            max-width: 800px;  /* Ancho máximo para mantener la lectura cómoda */
-            margin: 30px auto; /* Centra el contenido horizontalmente */
+            max-width: 800px;
+            /* Ancho máximo para mantener la lectura cómoda */
+            margin: 30px auto;
+            /* Centra el contenido horizontalmente */
             padding: 0 20px;
         }
 
@@ -119,27 +144,32 @@
             padding: 30px;
             margin-bottom: 25px;
             border-radius: 14px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Sombra sutil alrededor */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            /* Sombra sutil alrededor */
         }
 
         /* Títulos secundarios (H2) de cada sección */
         h2 {
-            color: #437a8c;            /* Azul pastel */
+            color: #437a8c;
+            /* Azul pastel */
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 12px;
-            border-bottom: 2px solid #e0f0eb; /* Línea separadora inferior suave */
+            border-bottom: 2px solid #e0f0eb;
+            /* Línea separadora inferior suave */
             padding-bottom: 8px;
         }
 
         /* TABLAS DE CONTENIDO */
         table {
             width: 100%;
-            border-collapse: collapse; /* Une las líneas de celda para que se vea limpio */
+            border-collapse: collapse;
+            /* Une las líneas de celda para que se vea limpio */
             margin: 18px 0;
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px;
             text-align: left;
             font-size: 14px;
@@ -154,10 +184,11 @@
         }
 
         /* BOTONES DE ACCIÓN (Llamadas a la acción y botón de formulario) */
-        .btn-accion, 
+        .btn-accion,
         button[type="submit"] {
             display: inline-block;
-            background-color: #5b92a8; /* Azul pastel llamativo */
+            background-color: #5b92a8;
+            /* Azul pastel llamativo */
             color: #ffffff;
             padding: 10px 22px;
             border: none;
@@ -170,7 +201,7 @@
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
-        .btn-accion:hover, 
+        .btn-accion:hover,
         button[type="submit"]:hover {
             background-color: #46768a;
             transform: translateY(-1px);
@@ -178,7 +209,8 @@
 
         /* SECCIÓN CARRITO */
         .contenedor-carrito {
-            background-color: #f7fcfa; /* Recuadro interno con tono diferencial */
+            background-color: #f7fcfa;
+            /* Recuadro interno con tono diferencial */
             padding: 18px;
             border-radius: 10px;
             border: 1px solid #e3f2ed;
@@ -192,8 +224,10 @@
         /* FORMULARIO DE CONTACTO */
         form {
             display: flex;
-            flex-direction: column; /* Alinea los elementos en columna (uno abajo del otro) */
-            gap: 12px;               /* Espacio uniforme entre campos */
+            flex-direction: column;
+            /* Alinea los elementos en columna (uno abajo del otro) */
+            gap: 12px;
+            /* Espacio uniforme entre campos */
             margin-top: 15px;
         }
 
@@ -204,7 +238,9 @@
         }
 
         /* Estilo de los cuadros donde el usuario escribe o selecciona */
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             padding: 11px;
             border: 1px solid #cfd8dc;
             border-radius: 8px;
@@ -216,13 +252,16 @@
         }
 
         /* Borde azul pastel cuando el usuario hace clic dentro de un campo */
-        input:focus, select:focus, textarea:focus {
+        input:focus,
+        select:focus,
+        textarea:focus {
             border-color: #5b92a8;
         }
 
         textarea {
             min-height: 100px;
-            resize: vertical; /* Permite estirar el cuadro solo hacia abajo */
+            resize: vertical;
+            /* Permite estirar el cuadro solo hacia abajo */
         }
 
         /* PIE DE PÁGINA */
@@ -234,6 +273,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ENCABEZADO Y MENU -->
@@ -244,11 +284,14 @@
 
         <!-- Navegación con links que apuntan a los 'id' de cada sección -->
         <nav class="menu-navegacion">
-            <a href="#inicio" class="btn-nav">Inicio</a>
-            <a href="#clases" class="btn-nav">Clases</a>
-            <a href="#planillas" class="btn-nav">Planillas</a>
-            <a href="#carrito" class="btn-nav">🛒 Carrito</a>
-            <a href="#contacto" class="btn-nav">Contacto</a>
+            <ul>
+                <li><a href="#inicio" class="btn-nav">🏠 Inicio</a></li>
+                <li><a href="#clases" class="btn-nav">👩‍🏫 Clases particulares</a></li>
+                <li><a href="#planillas" class="btn-nav">📊 Planillas</a></li>
+                <li><a href="#contacto" class="btn-nav">💬 Contacto</a></li>
+            </ul>
+
+            <a href="#carrito" class="btn-carrito">🛒 Carrito</a>
         </nav>
     </header>
 
@@ -261,13 +304,14 @@
             <p>Clases particulares y herramientas digitales para aprender tecnología o aplicar en tu emprendimiento</p>
             <a href="#clases" class="btn-accion">Ver servicios</a>
         </section>
-<
+
+
         <!-- SECCIÓN 2: CLASES PARTICULARES -->
         <section id="clases">
             <h2>Clases particulares</h2>
-            <p>Aprendé herramientas digitales de manera práctica y adaptada a tus necesidades.</p> 
+            <p>Aprendé herramientas digitales de manera práctica y adaptada a tus necesidades.</p>
             <p>Modalidad online </p>
-            
+
             <table>
                 <thead>
                     <tr>
@@ -303,45 +347,46 @@
         </section>
 
         <!-- SECCIÓN 3: PLANILLAS -->
+
         <section id="planillas">
+
             <h2>Planillas para análisis de datos</h2>
+
             <p>Herramientas listas para organizar, analizar y visualizar información.</p>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Planilla</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Control de gastos</td>
-                        <td>Organización de ingresos y gastos</td>
-                        <td>$5.000</td>
-                    </tr>
-                    <tr>
-                        <td>Análisis de ventas</td>
-                        <td>Control y análisis de ventas</td>
-                        <td>$5.000</td>
-                    </tr>
-                    <tr>
-                        <td>Dashboard</td>
-                        <td>Indicadores y gráficos interactivos</td>
-                        <td>$5.000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#contacto" class="btn-accion">Encargar planilla</a>
+            <div class="productos">
+
+                <div class="card-producto">
+                    <h3>Control de gastos</h3>
+                    <p>Organización de ingresos y gastos.</p>
+                    <p class="precio">$5.000</p>
+                    <a href="#contacto" class="btn-accion">Encargar</a>
+                </div>
+
+                <div class="card-producto">
+                    <h3>Análisis de ventas</h3>
+                    <p>Control y análisis de ventas.</p>
+                    <p class="precio">$5.000</p>
+                    <a href="#contacto" class="btn-accion">Encargar</a>
+                </div>
+
+                <div class="card-producto">
+                    <h3>Dashboard</h3>
+                    <p>Indicadores y gráficos interactivos.</p>
+                    <p class="precio">$5.000</p>
+                    <a href="#contacto" class="btn-accion">Encargar</a>
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- SECCIÓN 4: VISTA PREVIA DEL CARRITO -->
-       <!-- SECCIÓN 4: VISTA PREVIA DEL CARRITO CON OPCIÓN DE ARREPENTIMIENTO -->
+
+        <!-- SECCIÓN 4: VISTA PREVIA DEL CARRITO CON OPCIÓN DE ARREPENTIMIENTO -->
         <section id="carrito">
             <h2>🛒 Tu Carrito de Compras</h2>
             <p>Ejemplo de cómo se visualiza tu pedido antes de solicitarlo:</p>
-            
+
             <div class="contenedor-carrito">
                 <table>
                     <thead>
@@ -361,10 +406,10 @@
                 <!-- Resumen de total y botones de acción -->
                 <div class="total-carrito">
                     <p><strong>Total estimado: $5.000</strong></p>
-                    
+
                     <!-- Botón principal para confirmar -->
                     <a href="#contacto" class="btn-accion">Confirmar por formulario</a>
-                    
+
                     <!-- Botón secundario para arrepentimiento / cancelar -->
                     <a href="#planillas" class="btn-cancelar"> Cancelar pedido</a>
                 </div>
@@ -372,12 +417,45 @@
                 <!-- NOTA DE ARREPENTIMIENTO -->
                 <!-- Aclaración visible para dar tranquilidad al usuario -->
                 <p class="nota-arrepentimiento">
-                    <small>💡 <strong>Boton de arrepentimiento:</strong> Podés cancelar o modificar tu pedido en cualquier momento antes de confirmar el pago por el formulario de contacto.</small>
+                    <small>💡 <strong>Boton de arrepentimiento:</strong> Podés cancelar o modificar tu pedido en
+                        cualquier momento antes de confirmar el pago por el formulario de contacto.</small>
                 </p>
             </div>
         </section>
 
         <!-- SECCIÓN 5: FORMULARIO DE CONTACTO -->
+
+        <!-- SECCIÓN DE RESEÑAS FIJAS -->
+        <section id="resenas">
+
+            <h2>Reseñas</h2>
+
+            <div class="resenas-grid">
+
+                <div class="resena">
+                    <p>“Las clases me ayudaron a entender mejor Excel.”</p>
+                    <strong>— Luciana</strong>
+                </div>
+
+                <div class="resena">
+                    <p>“Aprendí a organizar mis datos de una manera sencilla.”</p>
+                    <strong>— Laura</strong>
+                </div>
+
+                <div class="resena">
+                    <p>“Las explicaciones fueron claras y fáciles de seguir.”</p>
+                    <strong>— Carolina</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+
+
+
         <section id="contacto">
             <h2>Contacto</h2>
             <p>¿Querés aprender o necesitás manejar una herramienta para tu emprendimiento?</p>
@@ -412,4 +490,5 @@
     </footer>
 
 </body>
+
 </html>
