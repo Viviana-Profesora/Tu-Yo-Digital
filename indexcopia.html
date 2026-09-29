@@ -21,7 +21,259 @@
         rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
 
-    
+    <!-- CSS Apariencia visual -->
+    <style>
+
+        /* El asterisco (*) selecciona TODOS los elementos de la página. 
+           Limpiamos márgenes predeterminados para controlar el diseño desde cero */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Incluye bordes y rellenos en el ancho total */
+        }
+
+        /* Hace que la navegación con botones de salto (#inicio, #clases) desplace la página suavemente */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ESTILOS DEL CUERPO (BACKGROUND Y TIPOGRAFÍA GENERAL) */
+        body {
+            background-color: #eaf3ed;
+            /* Fondo verde pastel claro y relajante */
+            color: #37474f;
+            /* Texto en gris oscuro */
+            font-family: 'Montserrat', sans-serif;
+            /* Tipografía principal */
+            font-size: 15px;
+            line-height: 1.6;
+            /* Espaciado entre líneas de texto */
+        }
+
+        /* ENCABEZADO (HEADER) FIJO */
+        header {
+            background-color: #ffffff;
+            /* Fondo blanco para que resalte la cabecera */
+            text-align: center;
+            padding: 22px 20px 18px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            /* Sombra suave inferior */
+            position: sticky;
+            /* Mantiene el header fijo al hacer scroll */
+            top: 0;
+            z-index: 100;
+            /* Asegura que el header quede por encima de las secciones */
+        }
+
+        /* Control del logo */
+        .logo-imagen {
+            width: 100px;
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+            /* Centra la imagen horizontalmente */
+        }
+
+        /* Título principal con fuente cursiva en azul pastel */
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #5b92a8;
+            /* Azul pastel elegante */
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .subtitulo {
+            color: #78909c;
+            font-size: 14px;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-navegacion {
+            display: flex;
+            justify-content: center;
+            /* Centra los botones del menú */
+            gap: 10px;
+            /* Distancia entre botones */
+            flex-wrap: wrap;
+            /* Permite que los botones bajen si la pantalla es pequeña */
+        }
+
+        /* BOTONES DEL MENÚ (Forma de píldora) */
+        .btn-nav {
+            background-color: #dceee9;
+            /* Fondo suave mezcla verde/azul */
+            color: #2e6070;
+            /* Texto azul pastel oscuro */
+            padding: 8px 18px;
+            text-decoration: none;
+            /* Quita el subrayado típico de los enlaces */
+            border-radius: 20px;
+            /* Bordes redondeados */
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #c2e2d8;
+            transition: all 0.2s ease;
+            /* Transición suave al pasar el cursor */
+        }
+
+        /* EFECTO HOVER: Cambia de color cuando pasás el mouse por arriba */
+        .btn-nav:hover {
+            background-color: #5b92a8;
+            color: #ffffff;
+            border-color: #5b92a8;
+            transform: translateY(-2px);
+            /* Eleva levemente el botón */
+        }
+
+        /* CONTENEDOR PRINCIPAL Y SECCIONES */
+        main {
+            max-width: 800px;
+            /* Ancho máximo para mantener la lectura cómoda */
+            margin: 30px auto;
+            /* Centra el contenido horizontalmente */
+            padding: 0 20px;
+        }
+
+        /* Cada sección actúa como una tarjeta blanca flotante */
+        section {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            /* Sombra sutil alrededor */
+        }
+
+        /* Títulos secundarios (H2) de cada sección */
+        h2 {
+            color: #437a8c;
+            /* Azul pastel */
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e0f0eb;
+            /* Línea separadora inferior suave */
+            padding-bottom: 8px;
+        }
+
+        /* TABLAS DE CONTENIDO */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Une las líneas de celda para que se vea limpio */
+            margin: 18px 0;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+            border-bottom: 1px solid #eceff1;
+        }
+
+        /* Encabezados de tabla */
+        th {
+            background-color: #f2f9f5;
+            color: #3b7182;
+            font-weight: 600;
+        }
+
+        /* BOTONES DE ACCIÓN (Llamadas a la acción y botón de formulario) */
+        .btn-accion,
+        button[type="submit"] {
+            display: inline-block;
+            background-color: #5b92a8;
+            /* Azul pastel llamativo */
+            color: #ffffff;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-accion:hover,
+        button[type="submit"]:hover {
+            background-color: #46768a;
+            transform: translateY(-1px);
+        }
+
+        /* SECCIÓN CARRITO */
+        .contenedor-carrito {
+            background-color: #f7fcfa;
+            /* Recuadro interno con tono diferencial */
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #e3f2ed;
+        }
+
+        .total-carrito {
+            text-align: right;
+            margin-top: 12px;
+        }
+
+        /* FORMULARIO DE CONTACTO */
+        form {
+            display: flex;
+            flex-direction: column;
+            /* Alinea los elementos en columna (uno abajo del otro) */
+            gap: 12px;
+            /* Espacio uniforme entre campos */
+            margin-top: 15px;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #546e7a;
+        }
+
+        /* Estilo de los cuadros donde el usuario escribe o selecciona */
+        input,
+        select,
+        textarea {
+            padding: 11px;
+            border: 1px solid #cfd8dc;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            color: #37474f;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        /* Borde azul pastel cuando el usuario hace clic dentro de un campo */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #5b92a8;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+            /* Permite estirar el cuadro solo hacia abajo */
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #78909c;
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
